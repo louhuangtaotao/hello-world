@@ -3,8 +3,8 @@
 
 int main(void)
 {
- CRUL *crul;
- CRULcode res;
+ CURL *curl;
+ CURLcode res;
  
  curl=curl_easy_init();
  if(curl){
@@ -13,7 +13,7 @@ int main(void)
     if(res!=CURLE_OK)
        fprintf(stderr,"curl_easy_perform() failed:&s\n",
                curl_easy_strerror(res));
-       curl_easy_cleanup(crul);
+       curl_easy_cleanup(curl);
   }
   return 0;
  }
